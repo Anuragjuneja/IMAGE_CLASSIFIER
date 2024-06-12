@@ -8,7 +8,7 @@ import os
 import requests
 import logging
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Flatten
+from tensorflow.keras.layers import Dense, Flatten, Dropout, MaxPooling2D, Conv2D
 
 st.title("Welcome to Image Classifier")
 st.header("Drop an image and we will tell whether its AI generated or not")
@@ -24,22 +24,31 @@ def load_model():
     return model
 
 
-model = tf.keras.Sequential([
-    # Previous layers...
-    tf.keras.layers.Flatten(),  # Flatten the output to (1, 13456)
-    tf.keras.layers.Dense(2048, activation='relu'),  # Dense layer with 2048 units
-    tf.keras.layers.Dense(4096, activation='relu'),  # Dense layer with 4096 units
-    # More layers...
-])
+model = Sequential()
+
+model.add(Conv2D(16, (4, 4), 1, activation='relu', input_shape=(150, 150, 3)))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(32, (4, 4), 1, activation='relu'))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(16, (4, 4), 1, activation='relu'))
+model.add(MaxPooling2D())
+
+model.add(Flatten())
+model.add(Dense(32, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
 
 
 
 model=load_model()
+
+
 def predict(file):
-    img = keras.utils.load_img(file, target_size=(256, 256))
+    img = keras.utils.load_img(file, target_size=(150, 150))
     img_array = keras.utils.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0)
-    img_array = tf.image.resize(img_array, (256, 256))  # Resize the image to match the model's input shape
+    img_array = tf.image.resize(img_array, (150, 150))  # Resize the image to match the model's input shape
     img_array /= 255.0  # Normalize the pixel values to be between 0 and 1
     pred = model.predict(img_array)
     if np.argmax(tf.nn.softmax(pred[0])) == 0:
