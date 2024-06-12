@@ -44,6 +44,7 @@ model.add(Dense(1, activation='sigmoid'))
 model=load_model()
 
 
+
 def predict(file):
     img = keras.utils.load_img(file, target_size=(150, 150))
     img_array = keras.utils.img_to_array(img)
@@ -51,10 +52,11 @@ def predict(file):
     img_array = tf.image.resize(img_array, (150, 150))  # Resize the image to match the model's input shape
     img_array /= 255.0  # Normalize the pixel values to be between 0 and 1
     pred = model.predict(img_array)
-    if np.argmax(tf.nn.softmax(pred[0])) == 0:
-        st.write("AI Generated")
+    if(pred[0] > 0.5):
+        st.write("AI generated")
     else:
-        st.write("Real")
+        st.write("real image")
+    
 
 
 
