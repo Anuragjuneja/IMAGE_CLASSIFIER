@@ -44,7 +44,6 @@ model.add(Dense(1, activation='sigmoid'))
 model=load_model()
 
 
-
 def predict(file):
     img = keras.utils.load_img(file, target_size=(150, 150))
     img_array = keras.utils.img_to_array(img)
@@ -57,7 +56,6 @@ def predict(file):
     else:
         st.write("real image")
     
-
 
 
     
