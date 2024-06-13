@@ -24,14 +24,10 @@ page_bg_img = '''
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-def download_model():
-  
-    os.path.exists('/workspaces/IMAGE_CLASSIFIER/ai_imageclassifier.h5')
-    print(f"Model already exists at {'/workspaces/IMAGE_CLASSIFIER/ai_imageclassifier.h5'}.")
-    return
+
 
 def load_model():
-    download_model()
+   
     model=keras.models.load_model("ai_imageclassifier.h5")
     return model
 
