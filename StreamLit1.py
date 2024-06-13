@@ -64,9 +64,9 @@ def predict(file):
     img_array /= 255.0  # Normalize the pixel values to be between 0 and 1
     pred = model.predict(img_array)
     if(pred[0] > 0.5):
-        st.write("AI generated")
+        st.markdown("**<span style='font-size:25px;'>AI generated</span>**", unsafe_allow_html=True)
     else:
-        st.write("Real Image")
+        st.markdown("**<span style='font-size:25px;'>Real Image**", unsafe_allow_html=True)
     
 
 
