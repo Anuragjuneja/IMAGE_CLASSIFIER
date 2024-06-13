@@ -1,6 +1,6 @@
 # Real and AI Image Classifier 
 
-This repository consists of all the codes and resources which were used to construct a deep learning model capable of classifying images as "Real" or "AI Generated". This project was prepared under the Coding Club of IIT Guwahati as one of their 'Summer Projects'.
+This repository consists of all the codes and resources which were used to construct a deep learning model capable of classifying images as "Real" or "AI Generated". This project was prepared under the Coding Club of IIT Guwahati as one of their 'Even semsester Projects'.
 
 ## Project Overview and Dataset 
 
@@ -28,4 +28,4 @@ Performance of the model on different metrics:
 
 ## Access
 
-You may directly access the model via this link : https://imageclassifier-figwm6jwfksxal84rkb8lf.streamlit.app/
+You can directly access the model via this link : https://imageclassifier-figwm6jwfksxal84rkb8lf.streamlit.app/
