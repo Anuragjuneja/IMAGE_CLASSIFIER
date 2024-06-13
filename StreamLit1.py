@@ -32,7 +32,7 @@ def download_model():
 
 def load_model():
     download_model()
-    model=keras.models.load_model("/workspaces/IMAGE_CLASSIFIER/ai_imageclassifier.h5")
+    model=keras.models.load_model("ai_imageclassifier.h5")
     return model
 
 
