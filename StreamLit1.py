@@ -17,7 +17,7 @@ st.markdown("<h2 style='color:black;'>Upload an image to determine if it is<br>A
 page_bg_img = '''
 <style>
 .stApp {
-  background-image: url("https://ts2.space/wp-content/uploads/2023/10/How-to-outsmart-AI_652b1f9237400.jpg");
+  background-image: url("https://img.freepik.com/premium-photo/woman-with-robot-head_1019413-4136.jpg");
   background-size: cover;
 }
 </style>
