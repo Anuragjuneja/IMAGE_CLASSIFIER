@@ -1,6 +1,6 @@
 # Real and AI Image Classifier 
 
-This repository consists of all the codes and resources which were used to construct a deep learning model capable of classifying images as "Real" or "AI Generated". This project was prepared under the Coding Club of IIT Guwahati as one of their 'Summer Porjects'.
+This repository consists of all the codes and resources which were used to construct a deep learning model capable of classifying images as "Real" or "AI Generated". This project was prepared under the Coding Club of IIT Guwahati as one of their 'Summer Projects'.
 
 ## Project Overview and Dataset 
 
