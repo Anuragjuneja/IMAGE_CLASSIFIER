@@ -17,7 +17,7 @@ st.header("Upload an image to determine if it is AI generated or real")
 page_bg_img = '''
 <style>
 .stApp {
-  background-image: url("https://img.freepik.com/premium-photo/woman-with-robot-head_1019413-4136.jpg");
+  background-image: url("https://img.freepik.com/premium-photo/abstract-dynamic-background_946209-8929.jpg");
   background-size: cover;
 }
 </style>
