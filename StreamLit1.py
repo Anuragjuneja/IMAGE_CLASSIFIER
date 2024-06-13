@@ -11,8 +11,8 @@ from tensorflow.keras.layers import Dense, Flatten, Dropout, MaxPooling2D, Conv2
 
 
 
-st.markdown("<h1 style='color:black;'>AI Image Classifier</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='color:black;'>Upload an image to determine if it is<br>AI generated or real</h2>", unsafe_allow_html=True)
+st.markdown("<h1 style='color:white;'>AI Image Classifier</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='color:white;'>Upload an image to determine if it is<br>AI generated or real</h2>", unsafe_allow_html=True)
 
 page_bg_img = '''
 <style>
@@ -60,9 +60,9 @@ def predict(file):
     img_array /= 255.0  # Normalize the pixel values to be between 0 and 1
     pred = model.predict(img_array)
     if(pred[0] > 0.5):
-        st.markdown("<span style='font-size:25px; color:black;'><b>AI generated</b></span>", unsafe_allow_html=True)
+        st.markdown("<span style='font-size:25px; color:white;'><b>AI generated</b></span>", unsafe_allow_html=True)
     else:
-       st.markdown("<span style='font-size:25px; color:black;'><b>Real Image</b></span>", unsafe_allow_html=True)
+       st.markdown("<span style='font-size:25px; color:white;'><b>Real Image</b></span>", unsafe_allow_html=True)
 
 with st.spinner("Loading"):
     file=st.file_uploader("Upload Image",accept_multiple_files=False,type=['jpg','png','jpeg'])
