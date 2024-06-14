@@ -17,7 +17,7 @@ st.markdown("<h2 style='color:white;'>Upload an image to determine if it is<br>A
 page_bg_img = '''
 <style>
 .stApp {
-  background-image: url("https://img.freepik.com/premium-photo/child-constructing-robot-from-discarded-materials-creati-digital-native-gen-alpha-poor-concept_655090-665724.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2023/09/06/15/44/ai-generated-8237372_640.jpg");
   background-size: cover;
 }
 </style>
