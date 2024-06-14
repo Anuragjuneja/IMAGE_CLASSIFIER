@@ -11,8 +11,8 @@ from tensorflow.keras.layers import Dense, Flatten, Dropout, MaxPooling2D, Conv2
 
 
 
-st.markdown("<h1 style='color:white;'>AI Image Classifier</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='color:white;'>Upload an image to determine if it is<br>AI generated or real</h2>", unsafe_allow_html=True)
+st.markdown("<h1 style='color:black;'>AI Image Classifier</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='color:black;'>Upload an image to determine if it is<br>AI generated or real</h2>", unsafe_allow_html=True)
 
 page_bg_img = '''
 <style>
