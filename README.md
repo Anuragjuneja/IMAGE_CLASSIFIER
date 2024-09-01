@@ -20,7 +20,7 @@ The project essentially utilized the following tools:
 
 ## Model Performance
 
-Performance of the model on different metrics:
+Performance of the model on different  metrics:
 1. Training accuracy: 0.99193
 2. Testing accuracy: 0.77073
 3. F1 score: 0.77159
